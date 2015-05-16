@@ -1,9 +1,14 @@
 var React = require('react');
+var {Link, RouteHandler} = require('react-router');
 
 var About = React.createClass({
   render: function() {
     return (
-      <div>About</div>
+      <div>
+        <div>About</div>
+        <div><Link to="about-company">Company</Link></div>
+        <RouteHandler />
+       </div>
     );
   }
 });
