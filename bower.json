@@ -1,0 +1,20 @@
+{
+  "name": "webpackDemo",
+  "version": "0.0.0",
+  "authors": [
+    "Sean <xujihui1985@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "bootstrap": "~3.3.4",
+    "react-router": "~0.13.3"
+  }
+}
