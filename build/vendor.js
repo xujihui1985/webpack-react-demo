@@ -88,7 +88,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://test.com/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -98,7 +98,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(31);
+	__webpack_require__(32);
 	__webpack_require__(2);
 	module.exports = __webpack_require__(3);
 
@@ -162,7 +162,7 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(35);
+	var PropTypes = __webpack_require__(36);
 	var RouteHandler = __webpack_require__(15);
 	var Route = __webpack_require__(14);
 
@@ -216,9 +216,9 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var React = __webpack_require__(31);
-	var assign = __webpack_require__(52);
-	var PropTypes = __webpack_require__(35);
+	var React = __webpack_require__(32);
+	var assign = __webpack_require__(54);
+	var PropTypes = __webpack_require__(36);
 
 	function isLeftClickEvent(event) {
 	  return event.button === 0;
@@ -354,7 +354,7 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(35);
+	var PropTypes = __webpack_require__(36);
 	var RouteHandler = __webpack_require__(15);
 	var Route = __webpack_require__(14);
 
@@ -407,7 +407,7 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(35);
+	var PropTypes = __webpack_require__(36);
 	var Route = __webpack_require__(14);
 
 	/**
@@ -457,9 +457,9 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var React = __webpack_require__(31);
-	var invariant = __webpack_require__(53);
-	var PropTypes = __webpack_require__(35);
+	var React = __webpack_require__(32);
+	var invariant = __webpack_require__(55);
+	var PropTypes = __webpack_require__(36);
 	var RouteHandler = __webpack_require__(15);
 
 	/**
@@ -553,10 +553,10 @@
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var React = __webpack_require__(31);
-	var ContextWrapper = __webpack_require__(36);
-	var assign = __webpack_require__(52);
-	var PropTypes = __webpack_require__(35);
+	var React = __webpack_require__(32);
+	var ContextWrapper = __webpack_require__(37);
+	var assign = __webpack_require__(54);
+	var PropTypes = __webpack_require__(36);
 
 	var REF_NAME = '__routeHandler__';
 
@@ -660,7 +660,7 @@
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(37);
+	var LocationActions = __webpack_require__(38);
 	var History = __webpack_require__(23);
 
 	var _listeners = [];
@@ -776,7 +776,7 @@
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(37);
+	var LocationActions = __webpack_require__(38);
 	var History = __webpack_require__(23);
 
 	var _listeners = [];
@@ -907,7 +907,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var invariant = __webpack_require__(53);
+	var invariant = __webpack_require__(55);
 
 	function throwCannotModify() {
 	  invariant(false, 'You cannot modify a static location');
@@ -961,8 +961,8 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var invariant = __webpack_require__(53);
-	var LocationActions = __webpack_require__(37);
+	var invariant = __webpack_require__(55);
+	var LocationActions = __webpack_require__(38);
 	var History = __webpack_require__(23);
 
 	/**
@@ -1056,7 +1056,7 @@
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(37);
+	var LocationActions = __webpack_require__(38);
 
 	/**
 	 * A scroll behavior that attempts to imitate the default behavior
@@ -1110,8 +1110,8 @@
 
 	'use strict';
 
-	var invariant = __webpack_require__(53);
-	var canUseDOM = __webpack_require__(54).canUseDOM;
+	var invariant = __webpack_require__(55);
+	var canUseDOM = __webpack_require__(56).canUseDOM;
 
 	var History = {
 
@@ -1145,7 +1145,7 @@
 
 	'use strict';
 
-	var PropTypes = __webpack_require__(35);
+	var PropTypes = __webpack_require__(36);
 
 	/**
 	 * A mixin for components that modify the URL.
@@ -1220,7 +1220,7 @@
 
 	'use strict';
 
-	var PropTypes = __webpack_require__(35);
+	var PropTypes = __webpack_require__(36);
 
 	/**
 	 * A mixin for components that need to know the path, routes, URL
@@ -1303,10 +1303,10 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var assign = __webpack_require__(52);
-	var invariant = __webpack_require__(53);
-	var warning = __webpack_require__(55);
-	var PathUtils = __webpack_require__(38);
+	var assign = __webpack_require__(54);
+	var invariant = __webpack_require__(55);
+	var warning = __webpack_require__(57);
+	var PathUtils = __webpack_require__(39);
 
 	var _currentRoute;
 
@@ -1505,9 +1505,9 @@
 	/* jshint -W084 */
 	'use strict';
 
-	var React = __webpack_require__(31);
-	var assign = __webpack_require__(52);
-	var warning = __webpack_require__(55);
+	var React = __webpack_require__(32);
+	var assign = __webpack_require__(54);
+	var warning = __webpack_require__(57);
 	var DefaultRoute = __webpack_require__(10);
 	var NotFoundRoute = __webpack_require__(12);
 	var Redirect = __webpack_require__(13);
@@ -1591,28 +1591,28 @@
 	/* WEBPACK VAR INJECTION */(function(process) {/* jshint -W058 */
 	'use strict';
 
-	var React = __webpack_require__(31);
-	var warning = __webpack_require__(55);
-	var invariant = __webpack_require__(53);
-	var canUseDOM = __webpack_require__(54).canUseDOM;
-	var LocationActions = __webpack_require__(37);
+	var React = __webpack_require__(32);
+	var warning = __webpack_require__(57);
+	var invariant = __webpack_require__(55);
+	var canUseDOM = __webpack_require__(56).canUseDOM;
+	var LocationActions = __webpack_require__(38);
 	var ImitateBrowserBehavior = __webpack_require__(21);
 	var HashLocation = __webpack_require__(16);
 	var HistoryLocation = __webpack_require__(17);
 	var RefreshLocation = __webpack_require__(18);
 	var StaticLocation = __webpack_require__(19);
-	var ScrollHistory = __webpack_require__(39);
+	var ScrollHistory = __webpack_require__(40);
 	var createRoutesFromReactChildren = __webpack_require__(27);
-	var isReactChildren = __webpack_require__(40);
-	var Transition = __webpack_require__(41);
-	var PropTypes = __webpack_require__(35);
-	var Redirect = __webpack_require__(42);
+	var isReactChildren = __webpack_require__(41);
+	var Transition = __webpack_require__(42);
+	var PropTypes = __webpack_require__(36);
+	var Redirect = __webpack_require__(43);
 	var History = __webpack_require__(23);
-	var Cancellation = __webpack_require__(43);
-	var Match = __webpack_require__(44);
+	var Cancellation = __webpack_require__(44);
+	var Match = __webpack_require__(45);
 	var Route = __webpack_require__(26);
-	var supportsHistory = __webpack_require__(45);
-	var PathUtils = __webpack_require__(38);
+	var supportsHistory = __webpack_require__(46);
+	var PathUtils = __webpack_require__(39);
 
 	/**
 	 * The default location for new routers.
@@ -2102,7 +2102,7 @@
 	}
 
 	module.exports = createRouter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
 /* 29 */
@@ -2181,22 +2181,23 @@
 	}
 
 /***/ },
-/* 31 */
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = React;
 
 /***/ },
-/* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var assign = __webpack_require__(52);
-	var ReactPropTypes = __webpack_require__(31).PropTypes;
+	var assign = __webpack_require__(54);
+	var ReactPropTypes = __webpack_require__(32).PropTypes;
 	var Route = __webpack_require__(26);
 
 	var PropTypes = assign({}, ReactPropTypes, {
@@ -2226,7 +2227,7 @@
 	module.exports = PropTypes;
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2243,7 +2244,7 @@
 	 * between the "owner" and "parent" contexts.
 	 */
 
-	var React = __webpack_require__(31);
+	var React = __webpack_require__(32);
 
 	var ContextWrapper = (function (_React$Component) {
 	  function ContextWrapper() {
@@ -2269,7 +2270,7 @@
 	module.exports = ContextWrapper;
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2299,14 +2300,14 @@
 	module.exports = LocationActions;
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var invariant = __webpack_require__(53);
-	var assign = __webpack_require__(57);
-	var qs = __webpack_require__(58);
+	var invariant = __webpack_require__(55);
+	var assign = __webpack_require__(59);
+	var qs = __webpack_require__(60);
 
 	var paramCompileMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|[*.()\[\]\\+|{}^$]/g;
 	var paramInjectMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$?]*[?]?)|[*]/g;
@@ -2457,14 +2458,14 @@
 	module.exports = PathUtils;
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var invariant = __webpack_require__(53);
-	var canUseDOM = __webpack_require__(54).canUseDOM;
-	var getWindowScrollPosition = __webpack_require__(56);
+	var invariant = __webpack_require__(55);
+	var canUseDOM = __webpack_require__(56).canUseDOM;
+	var getWindowScrollPosition = __webpack_require__(58);
 
 	function shouldUpdateScroll(state, prevState) {
 	  if (!prevState) {
@@ -2537,12 +2538,12 @@
 	module.exports = ScrollHistory;
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var React = __webpack_require__(31);
+	var React = __webpack_require__(32);
 
 	function isValidChild(object) {
 	  return object == null || React.isValidElement(object);
@@ -2555,15 +2556,15 @@
 	module.exports = isReactChildren;
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint -W058 */
 
 	'use strict';
 
-	var Cancellation = __webpack_require__(43);
-	var Redirect = __webpack_require__(42);
+	var Cancellation = __webpack_require__(44);
+	var Redirect = __webpack_require__(43);
 
 	/**
 	 * Encapsulates a transition to a given path.
@@ -2635,7 +2636,7 @@
 	module.exports = Transition;
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2652,7 +2653,7 @@
 	module.exports = Redirect;
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2666,7 +2667,7 @@
 	module.exports = Cancellation;
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2676,7 +2677,7 @@
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	/* jshint -W084 */
-	var PathUtils = __webpack_require__(38);
+	var PathUtils = __webpack_require__(39);
 
 	function deepSearch(route, pathname, query) {
 	  // Check the subtree first to find the most deeply-nested match.
@@ -2746,7 +2747,7 @@
 	module.exports = Match;
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2767,12 +2768,12 @@
 	module.exports = supportsHistory;
 
 /***/ },
-/* 46 */,
 /* 47 */,
 /* 48 */,
 /* 49 */,
 /* 50 */,
-/* 51 */
+/* 51 */,
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// shim for using process in browser
@@ -2868,7 +2869,8 @@
 
 
 /***/ },
-/* 52 */
+/* 53 */,
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2921,7 +2923,7 @@
 
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2978,10 +2980,10 @@
 
 	module.exports = invariant;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3029,7 +3031,7 @@
 
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3045,7 +3047,7 @@
 
 	"use strict";
 
-	var emptyFunction = __webpack_require__(59);
+	var emptyFunction = __webpack_require__(61);
 
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -3092,16 +3094,16 @@
 
 	module.exports = warning;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var invariant = __webpack_require__(53);
-	var canUseDOM = __webpack_require__(54).canUseDOM;
+	var invariant = __webpack_require__(55);
+	var canUseDOM = __webpack_require__(56).canUseDOM;
 
 	/**
 	 * Returns the current scroll position of the window as { x, y }.
@@ -3118,7 +3120,7 @@
 	module.exports = getWindowScrollPosition;
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3150,14 +3152,14 @@
 
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(60);
+	module.exports = __webpack_require__(62);
 
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3195,13 +3197,13 @@
 
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Stringify = __webpack_require__(61);
-	var Parse = __webpack_require__(62);
+	var Stringify = __webpack_require__(63);
+	var Parse = __webpack_require__(64);
 
 
 	// Declare internals
@@ -3216,12 +3218,12 @@
 
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Utils = __webpack_require__(63);
+	var Utils = __webpack_require__(65);
 
 
 	// Declare internals
@@ -3319,12 +3321,12 @@
 
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Utils = __webpack_require__(63);
+	var Utils = __webpack_require__(65);
 
 
 	// Declare internals
@@ -3486,7 +3488,7 @@
 
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules

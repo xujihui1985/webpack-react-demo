@@ -3,6 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
 var bower_dir = path.join(__dirname, 'bower_components');
 var node_module_dir = path.join(__dirname, 'node_modules');
+var SaveAssetsJson = require('assets-webpack-plugin');
 
 var config = {
   addVendor: function(name, path) {
@@ -18,12 +19,22 @@ var config = {
   },
   output: {
     path: './build',
-    publicPath: 'http://test.com/',  //how to use publicPath?
-    filename: '[name].js'
+    //publicPath: 'http://test.com/',  //how to use publicPath?
+    //filename: '[name]-[chunkhash].js',
+    filename: '[name].js',
+    //chunkFilename: "[id].js"
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
-    new ExtractTextPlugin('[name].css')
+    //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor-[chunkhash].js'),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+    //new ExtractTextPlugin('[name]-[chunkhash].css'),
+    new ExtractTextPlugin('[name].css'),
+    function() {
+      this.plugin("done", function(stats) {
+        console.log(stats.toJson().assetsByChunkName);
+      });
+    }
+    //new SaveAssetsJson({filename: 'assets.json'})
   ],
   module: {
     noParse: [],
@@ -43,7 +54,7 @@ var config = {
   }
 };
 
-config.addVendor('bootstrap.css', path.join(bower_dir, 'bootstrap', 'dist','css','bootstrap.css'));
+config.addVendor('bootstrap.css', path.join(bower_dir, 'bootstrap', 'dist','css','bootstrap.min.css'));
 //config.addVendor('react', path.join(bower_dir, 'react', 'react.js'));
 //config.addVendor('react-router', path.join(bower_dir, 'react-router', 'build', 'umd', 'ReactRouter.js'));
 
