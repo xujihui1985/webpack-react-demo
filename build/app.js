@@ -7,7 +7,7 @@ webpackJsonp([0],{
 	var Home = __webpack_require__(8);
 	var About = __webpack_require__(9);
 	var Company = __webpack_require__(6);
-	var React = __webpack_require__(32);
+	var React = __webpack_require__(33);
 	var Router = __webpack_require__(2);
 	var $__0=     Router,Route=$__0.Route,DefaultRoute=$__0.DefaultRoute;
 
@@ -31,17 +31,53 @@ webpackJsonp([0],{
 /***/ 6:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
+	var React = __webpack_require__(33);
 	var Navigation = __webpack_require__(2).Navigation;
+	var AnswerMultipleChoiceQuestion = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./AnswerMultipleChoiceQuestion\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var Home = React.createClass({displayName: "Home",
 	  mixins: [Navigation],
+	  getInitialState: function() {
+	    var choices = [
+	        {label:'hello', value:'hello', checked:true},
+	        {label:'world', value:'world', checked:false}
+	    ];
+	    return {
+	      choices: choices,
+	      selected: choices[0]
+	    };
+	  },
+	  choiceType: function(index) {
+	    var choices = this.state.choices;
+	    var selected;
+	    choices.forEach(function(item, i) {
+	      if(index === i) {
+	        item.checked = true;
+	        selected = item;
+	      } else {
+	        item.checked = false;
+	      }
+	    }.bind(this));
+	    this.setState({choices: choices, selected: selected});
+	  },
 	  render: function() {
+	    var goback;
+	    if(this.state.selected.value === 'hello') {
+	      goback = (
+	        React.createElement("div", null, 
+	          React.createElement("button", {onClick: this.goBack}, "go back"), 
+	          React.createElement("button", {onClick: function() {this.transitionTo('home')}.bind(this)}, "go to home")
+	        )
+	      );
+	    }
 	    return (
 	      React.createElement("div", {className: "company"}, 
 	        "Company", 
-	        React.createElement("button", {onClick: this.goBack}, "go back"), 
-	        React.createElement("button", {onClick: function() {this.transitionTo('home')}.bind(this)}, "go to home")
+	        React.createElement(AnswerMultipleChoiceQuestion, {
+	          label: "multiple-choice", 
+	          choices: this.state.choices, 
+	          onCompleted: this.choiceType}), 
+	        goback
 	      )
 	    );
 	  }
@@ -55,10 +91,10 @@ webpackJsonp([0],{
 /***/ 7:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
+	var React = __webpack_require__(33);
 	var $__0=   __webpack_require__(2),Link=$__0.Link,RouteHandler=$__0.RouteHandler;
 
-	__webpack_require__(31);
+	__webpack_require__(32);
 	__webpack_require__(3);
 
 	var App = React.createClass({displayName: "App",
@@ -86,9 +122,9 @@ webpackJsonp([0],{
 /***/ 8:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
-	var TodoList = __webpack_require__(33);
-	__webpack_require__(34);
+	var React = __webpack_require__(33);
+	var TodoList = __webpack_require__(34);
+	__webpack_require__(35);
 
 	var Home = React.createClass({displayName: "Home",
 	  _retrieveData: function() {
@@ -140,7 +176,7 @@ webpackJsonp([0],{
 /***/ 9:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
+	var React = __webpack_require__(33);
 	var $__0=   __webpack_require__(2),Link=$__0.Link,RouteHandler=$__0.RouteHandler;
 
 	var About = React.createClass({displayName: "About",
@@ -160,18 +196,18 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
-	var TodoItem = __webpack_require__(53);
+	var React = __webpack_require__(33);
+	var TodoItem = __webpack_require__(54);
 
 	var TodoList = React.createClass({displayName: "TodoList",
 	  propTypes: {
@@ -203,17 +239,17 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 53:
+/***/ 54:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(32);
+	var React = __webpack_require__(33);
 
 	var TodoItem = React.createClass({displayName: "TodoItem",
 	  propTypes: {
