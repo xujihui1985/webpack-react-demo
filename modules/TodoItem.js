@@ -13,11 +13,12 @@ var TodoItem = React.createClass({
   },
   render: function() {
     return (
-      <div className="input-group input-group-lg">
-        <span style={{backgroundColor: 'red'}} className="input-group-addon">
-        <input type="checkbox" />
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" />
         </span>
         <input 
+          className="form-control"
           type="text" 
           value={this.props.todo.val}
           onChange={this._onTextChanged}

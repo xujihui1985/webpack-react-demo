@@ -16,6 +16,13 @@ var routes = (
 )
 
 Router.run(routes, function (Root, state) {
-  console.log(state);
-    React.render(<Root/>, document.body);
+  var promises = state.routes.filter(function(route) {
+    return route.handler.fetchData;
+  }).reduce(function(promises, route){
+    promises.push(route.handler.fetchData(state.params));
+    return promises;
+  }, []);
+  Promise.all(promises).then(function(data) {
+    React.render(<Root data={data}/>, document.body);
+  })
 });

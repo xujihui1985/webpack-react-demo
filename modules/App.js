@@ -6,6 +6,7 @@ require('bootstrap.css');
 
 var App = React.createClass({
   render: function() {
+    console.log(this.props.data);
     return (
       <div>
         <header>
@@ -14,7 +15,6 @@ var App = React.createClass({
             <li><Link to="about">About</Link></li>
           </ul>
         </header>
-
        <RouteHandler />
       </div>
     );

@@ -3,6 +3,17 @@ var Navigation = require('react-router').Navigation;
 var AnswerMultipleChoiceQuestion = require('./AnswerMultipleChoiceQuestion');
 
 var Home = React.createClass({
+  statics: {
+    willTransitionTo: function(transition, params, query, callback) {
+      console.log('transition to', transition);
+      callback();
+    },
+    willTransitionFrom: function(transition, component) {
+      console.log('transition from', transition);
+      console.log('component', component);
+      transition.abort();
+    }
+  },
   mixins: [Navigation],
   getInitialState: function() {
     var choices = [
