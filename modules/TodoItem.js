@@ -13,8 +13,8 @@ var TodoItem = React.createClass({
   },
   render: function() {
     return (
-      <div class="input-group">
-        <span class="input-group-addon">
+      <div className="input-group">
+        <span className="input-group-addon">
           <input type="checkbox" />
         </span>
         <input 

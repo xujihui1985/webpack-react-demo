@@ -2,6 +2,7 @@ var React = require('react');
 var TodoList = require('./TodoList');
 var AppStore = require('./AppStore');
 var AppAction = require('./AppAction');
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 require('./Home.css');
 
 var Home = React.createClass({
@@ -48,7 +49,11 @@ var Home = React.createClass({
     }
     return (
       <div className="home">
-        {loading}
+        <ReactCSSTransitionGroup transitionName='loading'
+          transitionEnter={false}
+          transitionLeave={true}>
+          {loading}
+        </ReactCSSTransitionGroup>
         {this.state.username}
         <TodoList 
           todos={this.state.todos} 

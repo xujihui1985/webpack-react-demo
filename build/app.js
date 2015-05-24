@@ -111,7 +111,7 @@ webpackJsonp([0],[
 	var React = __webpack_require__(38);
 	var $__0=   __webpack_require__(2),Link=$__0.Link,RouteHandler=$__0.RouteHandler;
 	
-	__webpack_require__(44);
+	__webpack_require__(42);
 	__webpack_require__(46);
 	
 	var App = React.createClass({displayName: "App",
@@ -142,7 +142,8 @@ webpackJsonp([0],[
 	var TodoList = __webpack_require__(28);
 	var AppStore = __webpack_require__(29);
 	var AppAction = __webpack_require__(30);
-	__webpack_require__(42);
+	var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+	__webpack_require__(44);
 	
 	var Home = React.createClass({displayName: "Home",
 	  _retrieveData: function() {
@@ -188,7 +189,11 @@ webpackJsonp([0],[
 	    }
 	    return (
 	      React.createElement("div", {className: "home"}, 
-	        loading, 
+	        React.createElement(ReactCSSTransitionGroup, {transitionName: "loading", 
+	          transitionEnter: false, 
+	          transitionLeave: true}, 
+	          loading
+	        ), 
 	        this.state.username, 
 	        React.createElement(TodoList, {
 	          todos: this.state.todos, 
@@ -566,8 +571,8 @@ webpackJsonp([0],[
 	  },
 	  render: function() {
 	    return (
-	      React.createElement("div", {class: "input-group"}, 
-	        React.createElement("span", {class: "input-group-addon"}, 
+	      React.createElement("div", {className: "input-group"}, 
+	        React.createElement("span", {className: "input-group-addon"}, 
 	          React.createElement("input", {type: "checkbox"})
 	        ), 
 	        React.createElement("input", {
